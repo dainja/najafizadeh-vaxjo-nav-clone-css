@@ -1,0 +1,471 @@
+/* CSS Reset */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #262626;
+    color: 000000;
+}
+
+div{
+    display: block;
+}
+
+.main-nav{
+    height: 100px;
+    width: 100%;
+    background: #fcfcfc;
+}
+
+.nav-container{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1150px;
+}
+
+.nav-logo{
+    width: 25%;
+    
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: flex-end;
+    width: 75%;
+}
+
+.box{
+    /* display: flex; */
+    padding: 25px;
+    align-items: center;
+
+}
+
+/* padding-left makes icon go "center" but i feel there is another way */
+.box .btn{
+    padding-left: 15px;
+}
+
+/* Space between icon and Text */
+.box i{
+    margin-right: 5px;
+}
+
+.logo{
+    height: 100px;
+}
+
+/* Only created this for the background color, couldn't figure out where else to put it */
+.main-nav-top{
+    width: auto;
+    background: #007C3E;
+}
+
+
+.nav-top{
+    display: flex;
+    margin: auto;
+    height: 80px;
+    width: 1135px;    
+}
+
+/* Tried some stuff out til it looked like i wanted to. Question: How can i move "Bygga och bo" and "Se och göra" down to center? 
+update: after watching and reading about box-models i learned that everything is a box, so i did a class only
+for Bygga och bo and Se och göra, is this correct? (code starts below .menu)*/
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.main-nav-top .nav-top .menu .seochgora {
+    padding-top: 10px;
+}
+
+.startpage-top{
+    background-image: url(../image/Vy_over_Vxjo-och-Helgasjon.jpg);
+    width: 100%;
+    height: 450px;
+    position: relative;
+    opacity: 1;
+    display: block;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+
+.startpage-mid-container{
+    position: absolute;
+    width: 660px;
+    left: 0;
+    top: 127px;
+    right: 0;
+    z-index: 10;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px;
+
+}
+
+/* Border radius made the top-bottom corners round. Not good*/
+.top-search{
+    padding: 30px 35px 30px 15px;
+    position: relative;
+    overflow: hidden;
+    width: 660px;
+    margin: 0 auto;
+    border-radius: 3px;
+
+
+}
+/* This cuts the edge corner*/
+.top-search:after{
+    content: '';
+    position: absolute;
+    width: 1100%; height: 1100%;
+    top: 10px; right: -500%;
+    background: rgba(255, 255, 255, .6);
+    transform-origin: 54% 0;
+    transform: rotate(45deg);
+    z-index: -1;
+
+}
+
+#search-input{
+    appearance: none;
+    width: 100%;
+    height: 45px;
+    color: rgb(38, 38, 38);
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    background: rgb(255, 255, 255);
+    padding: 0px 11px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(186, 224, 203);
+    border-image: initial;
+    border-radius: 3px;
+
+}
+
+
+/* The position property absolute made the icon go from below search bar to above, why?*/
+.top-search button{
+    appearance: none;
+    background: #007C3E;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #007C3E;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: none;
+    cursor: pointer;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.popular-pages{
+    display: flex;
+    background-color: #BAE0CB;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.popular-pages div{
+    display: block;
+    font-weight: 700;
+    line-height: 22px;
+    padding-top: 8px;
+    padding-left: 10px;
+}
+
+.popular-pages a{
+    color: #003752;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-decoration: none;
+}
+
+.popular-pages a i.fa{
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    text-align: center;
+    padding-left: 1px;
+    padding-top: 1px;
+}
+
+.fa{
+    display: inline-block;
+    font-size: inherit;
+    text-rendering: auto;
+
+}
+
+/* Main page starts here*/
+
+.main-page{
+    width: 100%;
+}
+
+.main-page-container{
+    padding-right: 45px;
+    padding-left: 45px;
+    max-width: 1150px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 35px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.covid{
+    background-color: #f0f5d6;
+    padding: 10px 40px;
+    margin: 30px 0px;
+}
+
+.covid .covid-heading{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    font-weight: 800;
+}
+
+.covid .covid-news{
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.8em;
+    font-weight: 500;
+    letter-spacing: 0.45px;
+}
+
+.covid .covid-news a{
+    color: #007C3E;
+    text-decoration: underline;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+    text-decoration-line: underline;
+}
+
+/*
+.info{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: blue;
+}
+*/
+.info{
+    width: 100%;
+}
+
+.info-container{
+    display: flex;
+    grid-gap: 14px;
+    max-width: 1150px;
+}
+
+.card-one{
+    width: 25%;
+    border-top: 3px solid rgb(207, 230, 246);
+    border-right:  3px solid rgb(207, 230, 246);
+    border-bottom:  3px solid rgb(207, 230, 246);
+}
+
+.card-two{
+    width: 25%;
+    border-top: 3px solid rgb(253, 228, 180);
+    border-right:  3px solid rgb(253, 228, 180);
+    border-bottom:  3px solid rgb(253, 228, 180);
+}
+
+.card-three{
+    width: 25%;
+    border-top: 3px solid rgb(186, 224, 203);
+    border-right:  3px solid rgb(186, 224, 203);
+    border-bottom:  3px solid rgb(186, 224, 203);
+}
+
+
+.card-four{
+    width: 25%;
+    border-top: 3px solid rgb(250, 204, 227);
+    border-right:  3px solid rgb(250, 204, 227);
+    border-bottom:  3px solid rgb(250, 204, 227);
+}
+
+.card-image{
+    width: 100%;
+}
+
+.card-image{
+    height: 181px;
+    object-fit: cover;
+}
+
+.card-heading{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    margin-inline-start: 20px;
+    margin-inline-end: 20px;
+}
+
+.card-font-normal{
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: 0.55px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h2{
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+/* News main starts here*/
+
+.news-main{
+    width: 100%;
+}
+
+.news-container{
+    max-width: 1150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.news-container .card-heading{
+    margin-left: 0px;
+    margin-bottom: 10px;
+    color: rgb(38, 38, 38);
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+.news-container hr{
+    border: 0;
+    height: 2px;
+    background: rgb(186, 224, 203);
+    width: 60%;
+}
+
+.news{
+    padding-left: 20px;
+    padding-right: 30px;
+    max-width: 60%;
+    flex: 1 0 60%;
+    display: block;
+    position: relative;
+    box-shadow: none;
+    font-size: 16px;
+    line-height: 23px;
+    height: auto;
+    transition-property: background-color;
+    padding: 20px;
+
+}
+
+.date{
+    color: rgb(0, 55, 82);
+    display: block;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.news .article-heading{
+    display: inline-block;
+    margin-bottom: 3px;
+    font-size: 15px;
+    font-weight: 800;
+    padding-bottom: 1px;
+    color: rgb(0, 0, 0);
+}
+
+.news .article-desc{
+    line-height: 28px;
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.55px;
+}
+
+.font-btn{
+    padding-top: 4px;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+    text-align: center;
+    width: 60%;    
+}
+
+.font-btn a{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 124, 62);
+    box-shadow: none;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    padding: 7px 25px 8px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0, 124, 62);
+    border-image: initial;
+    position: relative;
+    display: inline;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+/* Aside starts here */
+
+.e-tjanster{
+    display: block;
+    justify-content: flex-end;
+    max-width: 40%;
+    background: #BAE0CB;
+}
+
